@@ -1,10 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% for letter in folders %}
-  <h2>{{ letter[0][0] }}</h2>
-  {% for idx in letter %}
-    <a href="{{ idx[0] }}/{{ idx }}.html">{{ idx }}</a>
-  {% endfor %}
+
+<h2>A</h2>
+{% for i in range(10) %}
+<a href="A/A{{ i + 1 }}.html">A{{ i + 1 }}</a>
 {% endfor %}
+
+<h2>B</h2>
+{% for i in range(15) %}
+<a href="B/B{{ i + 1 }}.html">B{{ i + 1 }}</a>
+{% endfor %}
+
+<h2>C</h2>
+{% for i in range(20) %}
+<a href="C/C{{ i + 1 }}.html">C{{ i + 1 }}</a>
+{% endfor %}
+
 {% endblock %}

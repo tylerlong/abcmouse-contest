@@ -1,17 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 {% for i in range(length) %}
-  {% if i == number - 1 %}
+  {% if letter + (i + 1) == dir %}
     <span class="paddingRight">{{ letter }}{{ i + 1 }}</span>
   {% else %}
     <a href="./{{ letter }}{{ i + 1 }}.html">{{ letter }}{{ i + 1 }}</a>
   {% endif %}
 {% endfor %}
 
-<h1>{{ letter }}{{ number }}</h1>
+<h1>{{ dir }}</h1>
 
 {% for i in [1, 2, 3] %}
-  <img height="256" src="../../materials/{{ letter }}/{{ letter }}{{ number }}/{{ letter }}{{ number }}-{{ i }}.bmp"/>
+  <img height="256" src="../../materials/{{ letter }}/{{ dir }}/{{ dir }}-{{ i }}.bmp"/>
 {% endfor %}
+
+<hr/>
+<h2>Listen and choose the right picture</h2>
+
+Hello audio
+
 {% endblock %}
