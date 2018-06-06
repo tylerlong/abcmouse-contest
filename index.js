@@ -30,7 +30,7 @@ for (let i = 0; i < letters.length; i++) {
       dir,
       words: files.slice(0, files.length - 1),
       sentence: files[files.length - 1],
-      root: '../..'
+      root: '..'
     }))
   }
 }
