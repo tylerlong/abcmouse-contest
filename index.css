@@ -2,12 +2,29 @@ a {
   margin-right: 16px;
 }
 
-.paddingRight {
+.currentPage {
   margin-right: 16px;
-  font-size: 200%;
+  font-size: 32px;
 }
 
 .pull-right {
   text-align: right;
   padding-right: 16px;
+}
+
+.left-choice {
+  margin-right: 32px;
+  padding-right: 32px;
+  border-right: 1px dashed purple;
+}
+
+.player-button {
+  font-size: 24px;
+  width: 128px;
+  height: 48px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  margin-left: 32px;
 }

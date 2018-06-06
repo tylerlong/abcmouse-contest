@@ -4,7 +4,7 @@
 
 {% for i in range(dirs.length) %}
   {% if letter + (i + 1) == dir %}
-    <span class="paddingRight">{{ letter }}{{ i + 1 }}</span>
+    <span class="currentPage">{{ letter }}{{ i + 1 }}</span>
   {% else %}
     <a href="./{{ letter }}{{ i + 1 }}.html">{{ letter }}{{ i + 1 }}</a>
   {% endif %}
@@ -21,10 +21,10 @@
 <img height="256" src="../materials/{{ letter }}/{{ dir }}/{{ sentence }}"/>
 
 
-<h2>Listening <button onclick="document.getElementById('player').play()" style="font-size: 24px; width: 128px; height: 48px; cursor: pointer; border-radius: 8px; background-color: #4CAF50; color: white;">▶️ Play 🎶</button></h2>
+<h2>Listening <button onclick="document.getElementById('player').play()" class="player-button">▶️ Play 🎶</button></h2>
 
-<div style="vertical-alignment: middle">
-  <img height="256" src="../materials/{{ letter }}/{{ dir }}/audio/{{ choices[0] }}" style="margin-right: 64px;"/>
+<div>
+  <img height="256" src="../materials/{{ letter }}/{{ dir }}/audio/{{ choices[0] }}" class="left-choice"/>
   <img height="256" src="../materials/{{ letter }}/{{ dir }}/audio/{{ choices[1] }}"/>
 </div>
 
