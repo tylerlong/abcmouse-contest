@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for letter in folders %}
+  <h2>{{ letter[0][0] }}</h2>
+  {% for idx in letter %}
+    <a href="{{ idx[0] }}/{{ idx }}.html">{{ idx }}</a>
+  {% endfor %}
+{% endfor %}
+{% endblock %}

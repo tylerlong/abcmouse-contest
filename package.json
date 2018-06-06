@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "license": "All rights reserved",
+  "scripts": {
+    "test": "node -r babel-register index.js"
+  },
   "dependencies": {
     "nunjucks": "^3.1.3"
   },
