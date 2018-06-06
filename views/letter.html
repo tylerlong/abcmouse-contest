@@ -1,5 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-Hello {{ folder }}
+{% for i in range(length) %}
+  {% if i == number - 1 %}
+    <span class="paddingRight">{{ letter }}{{ i + 1 }}</span>
+  {% else %}
+    <a href="./{{ letter }}{{ i + 1 }}.html">{{ letter }}{{ i + 1 }}</a>
+  {% endif %}
+{% endfor %}
+
+<h1>{{ letter }}{{ number }}</h1>
+
+{% for i in [1, 2, 3] %}
+  <img height="256" src="../../materials/{{ letter }}/{{ letter }}{{ number }}/{{ letter }}{{ number }}-{{ i }}.bmp"/>
+{% endfor %}
 {% endblock %}

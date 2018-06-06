@@ -16,7 +16,6 @@ const length = { A: 10, B: 15, C: 20 }
 
 for (const letter of letters) {
   for (let i = 0; i < length[letter]; i++) {
-    const folder = `${letter}/${letter}${i + 1}`
-    fs.writeFileSync(`${folder}.html`, nunjucks.render('letter.html', { folder, root: '../..' }))
+    fs.writeFileSync(`${letter}/${letter}${i + 1}.html`, nunjucks.render('letter.html', { letter, number: i + 1, root: '../..', length: length[letter] }))
   }
 }
