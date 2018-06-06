@@ -2,19 +2,13 @@
 
 {% block content %}
 
-<h2>A</h2>
-{% for i in range(10) %}
-<a href="A/A{{ i + 1 }}.html">A{{ i + 1 }}</a>
-{% endfor %}
-
-<h2>B</h2>
-{% for i in range(15) %}
-<a href="B/B{{ i + 1 }}.html">B{{ i + 1 }}</a>
-{% endfor %}
-
-<h2>C</h2>
-{% for i in range(20) %}
-<a href="C/C{{ i + 1 }}.html">C{{ i + 1 }}</a>
+{% for i in range(letters.length) %}
+  {% set letter = letters[i] %}
+  {% set dirs = dirss[i] %}
+  <h2>{{ letter }}</h2>
+  {% for j in range(dirs.length) %}
+    <a href="{{ letter }}/{{ letter }}{{ j + 1 }}.html">{{ letter }}{{ j + 1 }}</a>
+  {% endfor %}
 {% endfor %}
 
 {% endblock %}
